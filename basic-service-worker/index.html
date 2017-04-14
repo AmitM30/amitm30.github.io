@@ -63,7 +63,7 @@ limitations under the License.
     <!--<script src="/app.bundle.js"></script>-->
     <script>
         if ('serviceWorker' in window.navigator) {
-            window.navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (reg) {
+            window.navigator.serviceWorker.register('sw.js', { scope: '/' }).then(function (reg) {
                 if (reg.installing) {
                     console.log('Service worker installing');
                 } else if (reg.waiting) {
