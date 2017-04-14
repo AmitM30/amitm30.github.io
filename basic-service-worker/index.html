@@ -1,0 +1,79 @@
+<!--
+
+Copyright 2017 Amit M. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Service Workers - Get Up and Running</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Service Workers - Bootstrap">
+    <link rel="stylesheet" href="/styles/site.css">
+    
+  </head>
+  <body>
+    
+  <header class="site-header">
+    <h2>
+        Service Workers - Demonstration
+    </h2>
+    <div>
+        <ul>
+            <li>Load the page</li>
+            <li>Turn Wi-Fi / Internet off</li>
+            <li>Reload the page</li>
+        </ul>
+        <div>Voila ! Page still loads <i>(who can stop Iron man anyways)</i></div>
+    </div>
+    <br />
+    <div>
+        <img src="/images/iron_man.jpg" alt="There's no beating iron man'" />
+    </div>
+    <div class="container">
+        <div class="inner">
+            <button class="custom refresh loading">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle cx="50" r="40" cy="50"/>
+                <path d="M99.7.658v43.5h-44.4z"/>
+            </svg>
+            </button>
+        </div>
+    </div>
+  </header>
+  <div class="msg-container">
+    <div class="msg"></div>
+  </div>
+  <div class="photos"></div>
+
+    <!--<script src="/app.bundle.js"></script>-->
+    <script>
+        if ('serviceWorker' in window.navigator) {
+            window.navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (reg) {
+                if (reg.installing) {
+                    console.log('Service worker installing');
+                } else if (reg.waiting) {
+                    console.log('Service worker installed');
+                } else if (reg.active) {
+                    console.log('Service worker active');
+                }
+            }).catch(function (error) { console.info('Service Worker Registration failed with ' + error); });
+        }
+    </script>
+    
+  </body>
+</html>
