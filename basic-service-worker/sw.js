@@ -4,15 +4,15 @@ var self                      = this;
 var internals                 = {};
 internals.LRUCache            = {};             // Object to maintain timestamp for request urls
 
-internals.STATIC_CACHE_NAME   = 'static-v1-lfgjpsc';
-internals.API_CACHE_NAME      = 'api-v1-lfgjpsc';
-internals.SUGGEST_CACHE_NAME  = 'suggest-v1-lfgjpsc';
+internals.STATIC_CACHE_NAME   = 'static-v1-rxbaisi';
+internals.API_CACHE_NAME      = 'api-v1-rxbaisi';
+internals.SUGGEST_CACHE_NAME  = 'suggest-v1-rxbaisi';
 
 internals.SUGGEST_CACHE_TIME  = 60 * 5 * 1000;  // in seconds
 internals.API_CACHE_TIME      = 60 * 5 * 1000;  // in seconds
 
 internals.CACHE_FILE_LIST = [
-  '../fonts/proximanova-regular-webfont.woff2',
+  'fonts/proximanova-regular-webfont.woff2',
   'styles/site.css',
   'images/iron_man.jpg'
 ];
