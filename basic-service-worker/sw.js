@@ -4,9 +4,9 @@ var self                      = this;
 var internals                 = {};
 internals.LRUCache            = {};             // Object to maintain timestamp for request urls
 
-internals.STATIC_CACHE_NAME   = 'static-v1-359s3yz';
-internals.API_CACHE_NAME      = 'api-v1-359s3yz';
-internals.SUGGEST_CACHE_NAME  = 'suggest-v1-359s3yz';
+internals.STATIC_CACHE_NAME   = 'static-v1-jlb1m8w';
+internals.API_CACHE_NAME      = 'api-v1-jlb1m8w';
+internals.SUGGEST_CACHE_NAME  = 'suggest-v1-jlb1m8w';
 
 internals.SUGGEST_CACHE_TIME  = 60 * 5 * 1000;  // in seconds
 internals.API_CACHE_TIME      = 60 * 5 * 1000;  // in seconds
